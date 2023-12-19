@@ -1,0 +1,6 @@
+File Name,Date Time,Number of Pistols Detected,Number of Persons Detected,"Arm Extended (true, false)",danger_level,Image with Detections
+maxsteel.jpg,2023-12-18T21:30:24.356276,1,1,1,PELIGRO! Amenaza detectada,/images_upload/maxsteel_with_boxes.jpg
+maxsteeli.jpg,2023-12-18T21:30:45.563033,1,1,1,PELIGRO! Amenaza detectada,/images_upload/maxsteeli_with_boxes.jpg
+soldier.jpg,2023-12-18T21:31:40.585250,1,1,0,"Peligro, amenaza potencial detectada",/images_upload/soldier_with_boxes.jpg
+gunperson.jpg,2023-12-18T21:34:59.762973,1,2,0,"Peligro, amenaza potencial detectada",/images_upload/gunperson_with_boxes.jpg
+gunperson.jpg,2023-12-18T21:35:10.714127,1,2,0,"Peligro, amenaza potencial detectada",/images_upload/gunperson_with_boxes.jpg
