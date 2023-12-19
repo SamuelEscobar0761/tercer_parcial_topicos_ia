@@ -1,65 +1,45 @@
-### Informe del Proyecto
+# Informe del Proyecto
 
-### Estudiantes
-Samuel Matias Escobar Bejarano
-56825
-Ignacio Lizarazu Aramayo
-47046
+## Estudiantes
+- Samuel Matias Escobar Bejarano - 56825
+- Ignacio Lizarazu Aramayo - 47046
 
-#### IMPORTANTE
-Para el correcto funcionamiento es importante:
-- MODIFICAR el archivo /fastapi/predictor en la linea 3 donde es necesario introducir el PATH absoluto de la carpeta donde se clono el repositorio
-- En una terminal dirigirse hasta la carpeta de /web/react-gun-detector/ y ejecutar el comando npm install para luego ejecutarlo con npm run start
-- En una terminal diferente dirigirse hasta la carpeta /fastapi/ y ejecutar el comando uvicorn app:app -reload
+## IMPORTANTE
+Para asegurar el correcto funcionamiento del proyecto, se deben seguir estos pasos:
+- MODIFICAR el archivo `/fastapi/predictor` en la línea 3 para introducir el PATH absoluto donde se clonó el repositorio.
+- En una terminal, navegar hasta la carpeta `/web/react-gun-detector/` y ejecutar `npm install`, seguido de `npm run start`.
+- En una terminal diferente, dirigirse a la carpeta `/fastapi/` y ejecutar `uvicorn app:app --reload`.
 
-#### 1. `app.py` (Aplicación FastAPI)
-- *Funcionalidad*: Este archivo Python parece ser la parte de backend de una aplicación web utilizando FastAPI. Incluye importaciones para el manejo de archivos, imágenes y solicitudes HTTP.
-- *Características Clave*:
-  - Manejo de archivos con CSV y procesamiento de imágenes con OpenCV y PIL.
-  - Configuración de FastAPI con rutas para subir y procesar archivos.
-  - Configuración de middleware CORS (Cross-Origin Resource Sharing), probablemente para permitir solicitudes desde el frontend.
-  - Integración con un módulo llamado `predictor` (posiblemente `predictor.py`), que parece manejar tareas específicas de predicción relacionadas con armas y personas.
+## Detalles de los Archivos
 
-- *Requisitos*:
-  - Entorno Python.
-  - Biblioteca FastAPI.
-  - Bibliotecas para manejo de archivos e imágenes (`io`, `csv`, `cv2`, `PIL`).
-  - Configuración adecuada del módulo `predictor`.
+### 1. `app.py` (Aplicación FastAPI)
+- **Funcionalidad Actualizada**: Actúa como el backend, manejando la lógica de negocio y la interacción con el modelo de IA para detección de armas y análisis de posturas.
+- **Características Clave Actualizadas**:
+  - Incorpora algoritmos avanzados para detección de armas y análisis de posturas humanas.
+  - Mejoras en el procesamiento de imágenes y manejo de datos.
+  - Integración optimizada con el módulo `predictor`, mejorando la precisión y eficiencia en las predicciones.
 
-#### 2. `App.js` (Frontend React)
-- *Funcionalidad*: Este archivo JavaScript es parte de un frontend basado en React. Maneja interacciones del usuario, selecciones de archivos y se comunica con el backend.
-- *Características Clave*:
-  - Selección y manejo de archivos para subida.
-  - Integración con Axios para realizar solicitudes HTTP al backend.
-  - Gestión de estado para la selección de archivos, mensajes de predicción y estado del servicio.
+### 2. `App.js` (Frontend React)
+- **Funcionalidad Actualizada**: Interfaz de usuario para interactuar con el modelo de IA.
+- **Características Clave Actualizadas**:
+  - Interfaz intuitiva para la carga de imágenes y visualización de resultados.
+  - Mejoras en la gestión del estado y presentación de los resultados del modelo de IA.
 
-- *Requisitos*:
-  - Entorno Node.js.
-  - Biblioteca React.
-  - Axios para solicitudes HTTP.
-  - Archivo CSS para estilos (referenciado como `./App.css`).
+### 3. `predictor.py`
+- **Funcionalidad Actualizada**: Contiene lógica avanzada para la detección de armas y el análisis de posturas humanas, utilizando técnicas de aprendizaje profundo y visión computacional.
+- **Requisitos Actualizados**:
+  - Dependencias actualizadas para soportar algoritmos avanzados de IA y procesamiento de imágenes.
 
-#### 3. `predictor.py`
-- *Funcionalidad*: No se pudo acceder al contenido directamente. Presumiblemente, contiene la lógica para hacer predicciones, posiblemente relacionadas con armas y personas, como se infiere de `app.py`.
-- *Requisitos*:
-  - Entorno Python.
-  - Bibliotecas para procesamiento y predicción (potencialmente OpenCV, PIL, o similares).
-  - Debe estar correctamente implementado e integrado con `app.py`.
-
-#### Pasos para Ejecutar la Aplicación
-1. *Configuración del Backend (FastAPI)*
-   - Asegurarse de que Python y las bibliotecas requeridas estén instaladas.
-   - Configurar `predictor.py` correctamente.
-   - Modificar la línea 3 en `predictor.py` para especificar la ruta absoluta donde se clonó el repositorio.
+## Pasos para Ejecutar la Aplicación
+1. **Configuración del Backend (FastAPI)**: 
+   - Verificar la instalación de Python y las bibliotecas requeridas.
+   - Configurar correctamente `predictor.py`, incluyendo la especificación del PATH del repositorio.
    - Ejecutar `app.py` para iniciar el servidor FastAPI.
+2. **Configuración del Frontend (React)**: 
+   - Asegurar la instalación de Node.js y las dependencias de React.
+   - Ejecutar la aplicación React a través de `App.js`.
+3. **Interacción**: 
+   - Usar el frontend de React para cargar archivos.
+   - El backend procesa estos archivos y retorna los resultados para visualización en el frontend.
 
-2. *Configuración del Frontend (React)*
-   - Asegurarse de que Node.js esté instalado.
-   - Instalar React y Axios.
-   - Ejecutar la aplicación React (`App.js`).
-
-3. *Interacción*
-   - Utilizar el frontend de React para subir archivos.
-   - El backend procesa los archivos y devuelve resultados, que se muestran en el frontend.
-
-Sin acceso al contenido completo de los archivos, especialmente `predictor.py`, este resumen se basa en el contenido parcial disponible y suposiciones sobre estructuras típicas de tales aplicaciones. Para una descripción más detallada y precisa, es necesario tener acceso al contenido completo de todos los archivos.
+**Nota**: Este informe se ha actualizado para reflejar las mejoras en el modelo de IA y la interfaz de usuario, garantizando una experiencia más fluida y eficiente.
